@@ -19,6 +19,8 @@ public class ItemRepository {
         }
         else{
             em.merge(item);
+            //준영속 상태의 방식을 영속 상태로 변경
+            //변경 감지 기능을 사용하면 원한는 속성만 선택해서 교체할 수 있지만 병합은 모든 속성 교체
         }
     }
 
